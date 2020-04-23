@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+
+        <style>
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+        .grid-container3 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+		.grid-item2 .grid-item3 {
+			padding: 20px;
+			font-size: 30px;
+			text-align: center;
+		}
+        </style>
+
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        <style>
+            p, li{
+                color: #e7ad52;
+            }
+            strong {
+                color: yellow;
+            }
+        </style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2>Normal Mode</h2>
+                    <p class="fragment">It's really worth spending time on Normal Mode!!!</p>
+                </section>
+				<section>
+                    <h2>Movement 1</h2>
+                    <p class="fragment">Times + Movement</p>
+                    <div class="grid-container2">
+                        <div class="grid-item2">
+                            <ul>
+                                <li class="fragment">numbers: 1,2,3,4,...</li>
+                            </ul>
+                        </div>
+                        <div class="grid-item2">
+                            <ul>
+                                <li class="fragment">move: h,j,k,l</li>
+                                <li class="fragment">word(forward): w, e</li>
+                                <li class="fragment">word(backward): b, ge</li>
+                                <li class="fragment">jump into nth line: gg</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+				<section>
+                    <h2>Movement 2</h2>
+                    <p class="fragment">same line: 0, $, ^, g_</p>
+                    <p class="fragment">paragraph: {, }, (, )</p>
+                    <p class="fragment">first line: gg</p>
+                    <p class="fragment">last line: G</p>
+                    <p class="fragment">Current Page: H, M, L</p>
+                </section>
+                <section>
+                    <h2>Action 1</h2>
+                    <p>Verb + Times + Noun</p>
+                    <div class="grid-container3">
+						<div class="grid-item3">
+							<ul>
+								<li class="fragment">yank: y</li>
+								<li class="fragment">cut/delete: d</li>
+								<li class="fragment" style="color: red;">change: c</li>
+							</ul>
+						</div>
+						<div class="grid-item3">
+							<ul>
+								<li class="fragment">number: 1,2,3,...</li>
+								<li class="fragment">once: a</li>
+							</ul>
+						</div>
+						<div class="grid-item3">
+							<ul>
+								<li class="fragment">word: w</li>
+								<li class="fragment">paragraph: p</li>
+								<li class="fragment">movement: h, j, k, l, 0, ^, $, g_</li>
+							</ul>
+						</div>
+						<div class="grid-item3">
+						</div>
+						<div class="grid-item3">
+							<ul>
+								<li class="fragment" style="color: green;">inside: i</li>
+							</ul>
+						</div>
+						<div class="grid-item3">
+							<ul>
+								<li class="fragment" style="color: green;">brace: ', ", &lt, (, [, {</li>
+								<li class="fragment" style="color: green">tag for html: t</li>
+							</ul>
+						</div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Action 2</h2>
+                    <p class="fragment">yank a line: yy</p>
+                    <p class="fragment">cut/delete a line: dd</p>
+                    <p class="fragment">change a line: cc</p>
+                    <p class="fragment" style="color: grey;">------------------------------------------------------</p>
+                    <p class="fragment">paste content from: yank, cut/delete/change</p>
+                    <p class="fragment">paste: p, P</p>
+                </section>
+                <section>
+                    <h2>Easy or Hard?</h2>
+                    <p class="fragment">Consistency makes Vim easy to learn</p>
+                    <p class="fragment">Comparison: c, C, d, D, y, Y, p, P</p>
+                    <p class="fragment" style="color: grey;">Comparison: i, I, a, A, s, S, o, O</p>
+                    <p class="fragment">Vim is not hard but different</p>
+                </section>
+                <section>
+                    <h1><a href="https://shuaihsunlee.github.io/Vim/lesson3.html?transition=convex#/transitions">Next...</a></h1>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
